@@ -17,11 +17,11 @@
 % along with tccbsi.  If not, see <http://www.gnu.org/licenses/>.
 %
 
-% Identificação da classe
+% Identificação da classe.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{tccbsi}[2013/02/19 v0.1 TCC BSI]
 
-% Declaração das opções da classe
+% Declaração das opções da classe.
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
 \ProcessOptions\relax
 
@@ -34,14 +34,20 @@
 \RequirePackage[brazil]{babel}
 \RequirePackage{indentfirst}
 
-% Redefinição do modelo base do abnTeX2 e algumas configurações usadas pelo BSI
+% Redefinição do modelo base do abnTeX2 e algumas configurações usadas pelo BSI.
+% =============================================================================
+
+% Tamanho do recuo do paragrafo.
 \setlength{\parindent}{2cm}
 
+% Redefinindo a pontuação das seções e subseções.
 \renewcommand{\thechapter}{}
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
 
+% Redefinindo tamanho e formato da fonte para o comando \section, \subsection,
+% etc.
 \renewcommand{\ABNTEXchapterfont}{\bfseries\fontfamily{\familydefault}\selectfont}
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize}
 \renewcommand{\ABNTEXsectionfont}{\bfseries\fontfamily{\familydefault}\fontseries{\familydefault}\selectfont}
