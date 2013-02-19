@@ -1,0 +1,20 @@
+# Arquivos do vim
+*.swp
+
+# Arquivos do LaTeX
+*.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+*.log
+*.dvi
+*.pdf
+*.ps
+*.600pk
+*.tfm
+*.ilg
+*.ind
+*.idx
+
+# Arquivos de distribuição
+*.tar.bz2
