@@ -77,22 +77,19 @@
   \begin{capa}%
     \center
     \includegraphics[width=0.15\textwidth]{image/brasao_ufrn}\\
-    {\imprimirinstituicao}\\
-    {\imprimircentro}\\
-    {\imprimirdepartamento}\\
-    {\imprimircurso}\\
-    \vspace{5cm}
-    {\imprimirautor}
-
-    \vspace*{\fill}
+    {\normalsize\imprimirinstituicao}\\
+    {\normalsize\imprimircentro}\\
+    {\normalsize\imprimirdepartamento}\\
+    {\normalsize\imprimircurso}\\
+    \vspace{3cm}
+    {\normalsize\imprimirautor}\\
+    \vspace{3.5cm}
     {\ABNTEXchapterfont\imprimirtitulo}
     \vspace*{\fill}
 
-    {\imprimirlocal}
+    {\normalsize\imprimirlocal}
     \par
-    {\imprimirdata}
-
-    \vspace*{1cm}
+    {\normalsize\imprimirdata}
   \end{capa}
 }
 
