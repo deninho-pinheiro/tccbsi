@@ -34,6 +34,23 @@
 \RequirePackage[brazil]{babel}
 \RequirePackage{indentfirst}
 
+% Adição de alguns comandos para a capa
+\providecommand{\imprimircentro}{}
+\newcommand{\centro}[1]{\renewcommand{\imprimircentro}{#1}}
+
+\providecommand{\imprimirdepartamento}{}
+\newcommand{\departamento}[1]{\renewcommand{\imprimirdepartamento}{#1}}
+
+\providecommand{\imprimircurso}{}
+\newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
+
+% Definindo alguns macros com um valor padrão
+\local{Caicó -- RN}
+\instituicao{UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE}
+\centro{CENTRO DE ENSINO SUPERIOR DO SERIDÓ}
+\departamento{DEPARTAMENTO DE CIÊNCIAS EXATAS E APLICADAS}
+\curso{PROGRAMA DE GRADUAÇÃO EM SISTEMAS DE INFORMAÇÃO}
+
 % Redefinição do modelo base do abnTeX2 e algumas configurações usadas pelo BSI.
 % =============================================================================
 
@@ -53,3 +70,30 @@
 \renewcommand{\ABNTEXsectionfont}{\bfseries\fontfamily{\familydefault}\fontseries{\familydefault}\selectfont}
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+
+% Redefine a capa padrão do abnTeX2
+%\renewenvironment{capa}{\begin{titlingpage}}{\end{titlingpage}}
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \includegraphics[width=0.15\textwidth]{image/brasao_ufrn}\\
+    {\imprimirinstituicao}\\
+    {\imprimircentro}\\
+    {\imprimirdepartamento}\\
+    {\imprimircurso}\\
+    \vspace{5cm}
+    {\imprimirautor}
+
+    \vspace*{\fill}
+    {\ABNTEXchapterfont\imprimirtitulo}
+    \vspace*{\fill}
+
+    {\imprimirlocal}
+    \par
+    {\imprimirdata}
+
+    \vspace*{1cm}
+  \end{capa}
+}
+
+% Redefine a folha de rosto padrão do abnTeX2
