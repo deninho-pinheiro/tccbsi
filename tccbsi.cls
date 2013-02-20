@@ -26,7 +26,7 @@
 \ProcessOptions\relax
 
 % Classe principal e carregamento de pacotes
-\LoadClass[12pt,oneside,a4paper,article]{abntex2}
+\LoadClass[oneside,a4paper,article]{abntex2}
 
 \RequirePackage{mathptmx}
 \RequirePackage[T1]{fontenc}
