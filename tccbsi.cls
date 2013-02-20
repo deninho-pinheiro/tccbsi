@@ -81,9 +81,9 @@
     {\normalsize\imprimircentro}\\
     {\normalsize\imprimirdepartamento}\\
     {\normalsize\imprimircurso}\\
-    \vspace{3cm}
+    \vspace*{3cm}
     {\normalsize\imprimirautor}\\
-    \vspace{3.5cm}
+    \vspace*{3.5cm}
     {\ABNTEXchapterfont\imprimirtitulo}
     \vspace*{\fill}
 
@@ -94,3 +94,37 @@
 }
 
 % Redefine a folha de rosto padrão do abnTeX2
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+  \begin{center}
+
+    \vspace*{0.08cm}
+    {\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    {\ABNTEXchapterfont\imprimirtitulo}
+    \vspace*{\fill}
+
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+         \imprimirpreambulo\\
+
+         {\ABNTEXchapterfont\imprimirorientadorRotulo\ABNTEXsectionfont~\imprimirorientador\par}
+         \abntex@ifnotempty{\imprimircoorientador}{%
+            {\ABNTEXchapterfont\imprimircoorientadorRotuloo\ABNTEXsectionfont~\imprimircoorientador}%
+         }%
+       \end{minipage}%
+       \vspace*{\fill}
+    }%
+
+    \vspace*{\fill}
+
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+
+  \end{center}
+}
+\makeatother
+

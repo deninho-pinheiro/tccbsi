@@ -18,3 +18,7 @@
 
 # Arquivos de distribuição
 *.tar.bz2
+
+# Arquivos de teste de exemplos
+example/image
+example/tccbsi.cls
