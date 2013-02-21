@@ -32,7 +32,6 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[brazil]{babel}
-\RequirePackage{setspace}
 \RequirePackage{indentfirst}
 
 % Adição de alguns comandos para a capa
@@ -65,7 +64,8 @@
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
 
 % Definindo espaçamento padrão para 1.5cm
-\linespread{1.5}
+\OnehalfSpacing
+\setSpacing{1.45}
 
 % Redefinindo tamanho e formato da fonte para o comando \section, \subsection,
 % etc.
