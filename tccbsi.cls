@@ -55,7 +55,7 @@
 % =============================================================================
 
 % Tamanho do recuo do paragrafo.
-\setlength{\parindent}{2cm}
+\setlength{\parindent}{1.5cm}
 
 % Redefinindo a pontuação das seções e subseções.
 \renewcommand{\thechapter}{}
