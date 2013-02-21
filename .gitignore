@@ -16,6 +16,7 @@
 *.ind
 *.idx
 *.nlo
+*.toc
 
 # Arquivos de distribuição
 *.tar.bz2
