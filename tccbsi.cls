@@ -26,7 +26,7 @@
 \ProcessOptions\relax
 
 % Classe principal e carregamento de pacotes
-\LoadClass[oneside,a4paper,article]{abntex2}
+\LoadClass[12pt,oneside,a4paper,article]{abntex2}
 
 \RequirePackage{mathptmx}
 \RequirePackage[T1]{fontenc}
@@ -55,7 +55,7 @@
 % =============================================================================
 
 % Tamanho do recuo do paragrafo.
-\setlength{\parindent}{1.5cm}
+\setlength{\parindent}{2cm}
 
 % Redefinindo a pontuação das seções e subseções.
 \renewcommand{\thechapter}{}
