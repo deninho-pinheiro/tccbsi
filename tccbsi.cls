@@ -67,6 +67,11 @@
 \OnehalfSpacing
 \setSpacing{1.45}
 
+% Espaçamento das seções para o texto
+\setaftersecskip{0.4\onelineskip}
+\setaftersubsecskip{0.4\onelineskip}
+\setaftersubsubsecskip{0.4\onelineskip}
+
 % Redefinindo tamanho e formato da fonte para o comando \section, \subsection,
 % etc.
 \renewcommand{\ABNTEXchapterfont}{\bfseries\fontfamily{\familydefault}\selectfont}
