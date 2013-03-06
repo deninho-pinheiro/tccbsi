@@ -22,118 +22,38 @@
 \ProvidesClass{tccbsi}[2013/02/19 v0.1 TCC BSI]
 
 % Declaração das opções da classe.
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{abntex2}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
 \ProcessOptions\relax
 
 % Classe principal e carregamento de pacotes
-\LoadClass[12pt,oneside,a4paper,article]{abntex2}
+\LoadClass[12pt,oneside,a4paper,article]{memoir}
 
+% Define a fonte para Times New Roman
 \RequirePackage{mathptmx}
+
+% Define a codificação e linguagem usada no arquivo de texto
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[brazil]{babel}
+
+% Sempre aplica o recuo do paragrafo.
 \RequirePackage{indentfirst}
 
-% Adição de alguns comandos para a capa
-\providecommand{\imprimircentro}{}
-\newcommand{\centro}[1]{\renewcommand{\imprimircentro}{#1}}
+% Define a formatação da página Esquerda, Direita, Superior, Inferior
+% (3cm, 2cm, 3cm, 2cm)
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout
 
-\providecommand{\imprimirdepartamento}{}
-\newcommand{\departamento}[1]{\renewcommand{\imprimirdepartamento}{#1}}
+% Formatação simples do texto (1.5)
+\OnehalfSpacing
 
-\providecommand{\imprimircurso}{}
-\newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
-
-% Definindo alguns macros com um valor padrão
-\local{Caicó -- RN}
-\instituicao{UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE}
-\centro{CENTRO DE ENSINO SUPERIOR DO SERIDÓ}
-\departamento{DEPARTAMENTO DE CIÊNCIAS EXATAS E APLICADAS}
-\curso{PROGRAMA DE GRADUAÇÃO EM SISTEMAS DE INFORMAÇÃO}
-
-% Redefinição do modelo base do abnTeX2 e algumas configurações usadas pelo BSI.
-% =============================================================================
-
-% Tamanho do recuo do paragrafo.
+% Formatação do recuo do parágrafo
 \setlength{\parindent}{2cm}
 
-% Redefinindo a pontuação das seções e subseções.
+% Formatação do contador dos capítulos, seções, subseções, etc.
 \renewcommand{\thechapter}{}
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
-
-% Definindo espaçamento padrão para 1.5cm
-\OnehalfSpacing
-\setSpacing{1.45}
-
-% Espaçamento das seções para o texto
-\setaftersecskip{0.4\onelineskip}
-\setaftersubsecskip{0.4\onelineskip}
-\setaftersubsubsecskip{0.4\onelineskip}
-
-% Redefinindo tamanho e formato da fonte para o comando \section, \subsection,
-% etc.
-\renewcommand{\ABNTEXchapterfont}{\bfseries\fontfamily{\familydefault}\selectfont}
-\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
-\renewcommand{\ABNTEXsectionfont}{\bfseries\fontfamily{\familydefault}\fontseries{\familydefault}\selectfont}
-\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
-\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
-
-% Redefine a capa padrão do abnTeX2
-%\renewenvironment{capa}{\begin{titlingpage}}{\end{titlingpage}}
-\renewcommand{\imprimircapa}{%
-  \begin{capa}%
-    \center
-    \includegraphics[width=0.15\textwidth]{image/brasao_ufrn}\\
-    {\imprimirinstituicao}\\
-    {\imprimircentro}\\
-    {\imprimirdepartamento}\\
-    {\imprimircurso}\\
-    \vspace*{3cm}
-    {\imprimirautor}\\
-    \vspace*{3.5cm}
-    {\ABNTEXchapterfont\imprimirtitulo}
-    \vspace*{\fill}
-
-    {\imprimirlocal}
-    \par
-    {\imprimirdata}
-  \end{capa}
-}
-
-% Redefine a folha de rosto padrão do abnTeX2
-\makeatletter
-\renewcommand{\folhaderostocontent}{
-  \begin{center}
-
-    \vspace*{0.08cm}
-    {\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    {\ABNTEXchapterfont\imprimirtitulo}
-    \vspace*{\fill}
-
-    \abntex@ifnotempty{\imprimirpreambulo}{%
-      \hspace{.45\textwidth}
-      \begin{minipage}{.5\textwidth}
-         \imprimirpreambulo\\
-
-         {\ABNTEXchapterfont\imprimirorientadorRotulo\ABNTEXsectionfont~\imprimirorientador\par}
-         \abntex@ifnotempty{\imprimircoorientador}{%
-            {\ABNTEXchapterfont\imprimircoorientadorRotuloo\ABNTEXsectionfont~\imprimircoorientador}%
-         }%
-       \end{minipage}%
-       \vspace*{\fill}
-    }%
-
-    \vspace*{\fill}
-
-    {\imprimirlocal}
-    \par
-    {\imprimirdata}
-
-  \end{center}
-}
-\makeatother
 
