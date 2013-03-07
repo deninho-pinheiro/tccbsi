@@ -46,14 +46,38 @@
 \checkandfixthelayout
 
 % Formatação simples do texto (1.5)
-\OnehalfSpacing
+\setSpacing{1.45}
 
 % Formatação do recuo do parágrafo
 \setlength{\parindent}{2cm}
 
+% Profundidade do contador de seções, subseções, etc.
+\setsecnumdepth{subparagraph}
+\settocdepth{subparagraph}
+
 % Formatação do contador dos capítulos, seções, subseções, etc.
-\renewcommand{\thechapter}{}
+\renewcommand{\thechapter}{} % Ignore chapter
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
+\renewcommand{\theparagraph}{\thesubsubsection\arabic{paragraph}.}
+\renewcommand{\thesubparagraph}{\theparagraph\arabic{subparagraph}.}
+
+% Espaçamento das seções para o texto
+\setaftersecskip{0.4\onelineskip}
+\setaftersubsecskip{0.4\onelineskip}
+\setaftersubsubsecskip{0.4\onelineskip}
+\setafterparaskip{0.4\onelineskip}
+\setaftersubparaskip{0.4\onelineskip}
+
+% Espaçamento entre paragrafos
+\setlength{\parskip}{\lineskip}
+
+% Formatação das seções, subseções, etc.
+\setsecheadstyle{\normalsize\bfseries\raggedright\MakeUppercase}
+\setsubsecheadstyle{\normalsize\raggedright}
+\setsubsubsecheadstyle{\normalsize\raggedright}
+\setparaheadstyle{\normalsize\raggedright}
+\setsubparaheadstyle{\normalsize\raggedright}
+\setsubparaindent{\paraindent}
 
