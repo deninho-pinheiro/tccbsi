@@ -6,24 +6,18 @@ A classe tccbsi é um modelo LaTeX para o TCC do curso de BSI.
 Dependências
 =========
 
-O modelo depende do abnTeX2, que pode ser baixado na página do projeto em:
-http://code.google.com/p/abntex2/
-
+O modelo depende do memoir, que provavelmente já vem instalado com sua
+distribuição do LaTeX.
 Instalação
 =========
 
-Baixe o pacote do abnTeX2 no link
-http://code.google.com/p/abntex2/downloads/detail?name=abntex2.tds-1.4.zip&can=2&q=
-crie uma pasta com o nome texmf na pasta do seu usuário e extraia o pacote
-dentro dela.
-
-E por ultimo, copie o arquivo tccbsi.cls para a pasta onde está seu documento
+Simplesmente copie o arquivo tccbsi.cls para a pasta onde está seu documento
 LaTeX.
 
 Uso
 =========
 
-Para usar a classe tccbsi, simplesmente defina a documentclass com a classe
+Para usar a classe tccbsi, ibasta definir a documentclass com a classe
 tccbsi.
 
 Exemplo:
