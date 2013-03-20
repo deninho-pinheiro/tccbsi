@@ -65,7 +65,7 @@
 
 % Definindo espaçamento padrão para 1.5cm
 \OnehalfSpacing
-\setSpacing{1.45}
+\setSpacing{1.5}
 
 % Espaçamento das seções para o texto
 \setaftersecskip{0.4\onelineskip}
