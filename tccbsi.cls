@@ -57,22 +57,29 @@
 % Tamanho do recuo do paragrafo.
 \setlength{\parindent}{2cm}
 
+% Espaçamento entre paragrafos.
+\setlength{\parskip}{\lineskip}
+
+% Definindo espaçamento padrão para 1.5cm
+\setSpacing{1.5}
+
+% Profundidade do contador de seções, subseções, etc.
+\settocdepth{subparagraph}
+
+% Espaçamento das seções para o texto.
+\setaftersecskip{\onelineskip}
+\setaftersubsecskip{\onelineskip}
+\setaftersubsubsecskip{\onelineskip}
+\setafterparaskip{\onelineskip}
+\setaftersubparaskip{\onelineskip}
+
 % Redefinindo a pontuação das seções e subseções.
 \renewcommand{\thechapter}{}
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
-
-% Definindo espaçamento padrão para 1.5cm
-\OnehalfSpacing
-\setSpacing{1.5}
-
-% Espaçamento das seções para o texto
-\setaftersecskip{0.4\onelineskip}
-\setaftersubsecskip{0.4\onelineskip}
-\setaftersubsubsecskip{0.4\onelineskip}
-
-% Configuração do estilo do sumário.
+\renewcommand{\theparagraph}{\thesubsubsection\arabic{paragraph}.}
+\renewcommand{\thesubparagraph}{\theparagraph\arabic{subparagraph}.}
 
 % Redefinindo tamanho e formato da fonte para o comando \section, \subsection,
 % etc.
