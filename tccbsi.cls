@@ -80,6 +80,12 @@
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 
+% Configuração do estilo da bibliografia.
+\addto\captionsbrazil{%
+    \renewcommand{\bibname}{REFER\^ENCIAS BIBLIOGRÁFICAS}
+}
+\renewcommand{\bibsection}{\section*{\bibname}}
+
 % Redefine a capa padrão do abnTeX2
 %\renewenvironment{capa}{\begin{titlingpage}}{\end{titlingpage}}
 \renewcommand{\imprimircapa}{%
@@ -96,8 +102,7 @@
     {\ABNTEXchapterfont\imprimirtitulo}
     \vspace*{\fill}
 
-    {\imprimirlocal}
-    \par
+    {\imprimirlocal}\\
     {\imprimirdata}
   \end{capa}
 }
@@ -129,8 +134,7 @@
 
     \vspace*{\fill}
 
-    {\imprimirlocal}
-    \par
+    {\imprimirlocal}\\
     {\imprimirdata}
 
   \end{center}
