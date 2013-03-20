@@ -29,9 +29,11 @@
 \LoadClass[12pt,oneside,a4paper,article]{abntex2}
 
 \RequirePackage{mathptmx}
+\RequirePackage{graphicx}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[brazil]{babel}
+\RequirePackage[alf]{abntcite}
 \RequirePackage{indentfirst}
 
 % Adição de alguns comandos para a capa
