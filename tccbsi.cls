@@ -46,10 +46,10 @@
 
 % Definindo alguns macros com um valor padrão
 \local{Caicó -- RN}
-\instituicao{UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE}
-\centro{CENTRO DE ENSINO SUPERIOR DO SERIDÓ}
-\departamento{DEPARTAMENTO DE CIÊNCIAS EXATAS E APLICADAS}
-\curso{PROGRAMA DE GRADUAÇÃO EM SISTEMAS DE INFORMAÇÃO}
+\instituicao{Universidade Federal do Rio Grande do Norte}
+\centro{Centro de Ensino Superior do Seridó}
+\departamento{Departamento de Ciências Exatas e Aplicadas}
+\curso{Programa de Graduação em Sistemas de Informação}
 
 % Redefinição do modelo base do abnTeX2 e algumas configurações usadas pelo BSI.
 % =============================================================================
@@ -72,6 +72,8 @@
 \setaftersubsecskip{0.4\onelineskip}
 \setaftersubsubsecskip{0.4\onelineskip}
 
+% Configuração do estilo do sumário.
+
 % Redefinindo tamanho e formato da fonte para o comando \section, \subsection,
 % etc.
 \renewcommand{\ABNTEXchapterfont}{\bfseries\fontfamily{\familydefault}\selectfont}
@@ -82,6 +84,7 @@
 
 % Configuração do estilo da bibliografia.
 \addto\captionsbrazil{%
+    \renewcommand{\contentsname}{\textbf{SUMÁRIO}}
     \renewcommand{\bibname}{REFER\^ENCIAS BIBLIOGRÁFICAS}
 }
 \renewcommand{\bibsection}{\section*{\bibname}}
@@ -92,14 +95,14 @@
   \begin{capa}%
     \center
     \includegraphics[width=0.15\textwidth]{image/brasao_ufrn}\\
-    {\imprimirinstituicao}\\
-    {\imprimircentro}\\
-    {\imprimirdepartamento}\\
-    {\imprimircurso}\\
+    {\MakeUppercase{\imprimirinstituicao}}\\
+    {\MakeUppercase{\imprimircentro}}\\
+        {\MakeUppercase{\imprimirdepartamento}}\\
+        {\MakeUppercase{\imprimircurso}}\\
     \vspace*{3cm}
-    {\imprimirautor}\\
+    {\MakeUppercase{\imprimirautor}}\\
     \vspace*{3.5cm}
-    {\ABNTEXchapterfont\imprimirtitulo}
+    {\ABNTEXchapterfont\MakeUppercase{\imprimirtitulo}}
     \vspace*{\fill}
 
     {\imprimirlocal}\\
@@ -113,10 +116,10 @@
   \begin{center}
 
     \vspace*{0.08cm}
-    {\imprimirautor}
+    {\MakeUppercase{\imprimirautor}}
 
     \vspace*{\fill}\vspace*{\fill}
-    {\ABNTEXchapterfont\imprimirtitulo}
+    {\ABNTEXchapterfont\MakeUppercase{\imprimirtitulo}}
     \vspace*{\fill}
 
     \abntex@ifnotempty{\imprimirpreambulo}{%
