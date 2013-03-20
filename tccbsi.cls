@@ -25,13 +25,13 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
 \ProcessOptions\relax
 
-% Classe principal e carregamento de pacotes
+% Classe principal e carregamento de pacotes.
 \LoadClass[12pt,oneside,a4paper,article]{memoir}
 
-% Define a fonte para Times New Roman
+% Define a fonte para Times New Roman.
 \RequirePackage{mathptmx}
 
-% Define a codificação e linguagem usada no arquivo de texto
+% Define a codificação e linguagem usada no arquivo de texto.
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[brazil]{babel}
@@ -40,15 +40,15 @@
 \RequirePackage{indentfirst}
 
 % Define a formatação da página Esquerda, Direita, Superior, Inferior
-% (3cm, 2cm, 3cm, 2cm)
+% (3cm, 2cm, 3cm, 2cm).
 \setlrmarginsandblock{3cm}{2cm}{*}
 \setulmarginsandblock{3cm}{2cm}{*}
 \checkandfixthelayout
 
-% Formatação simples do texto (1.5)
+% Formatação simples do texto (1.5).
 \setSpacing{1.45}
 
-% Formatação do recuo do parágrafo
+% Formatação do recuo do parágrafo.
 \setlength{\parindent}{2cm}
 
 % Profundidade do contador de seções, subseções, etc.
@@ -56,21 +56,21 @@
 \settocdepth{subparagraph}
 
 % Formatação do contador dos capítulos, seções, subseções, etc.
-\renewcommand{\thechapter}{} % Ignore chapter
+\renewcommand{\thechapter}{} % Ignora o capítulo.
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
 \renewcommand{\theparagraph}{\thesubsubsection\arabic{paragraph}.}
 \renewcommand{\thesubparagraph}{\theparagraph\arabic{subparagraph}.}
 
-% Espaçamento das seções para o texto
-\setaftersecskip{0.4\onelineskip}
-\setaftersubsecskip{0.4\onelineskip}
-\setaftersubsubsecskip{0.4\onelineskip}
-\setafterparaskip{0.4\onelineskip}
-\setaftersubparaskip{0.4\onelineskip}
+% Espaçamento das seções para o texto.
+\setaftersecskip{\onelineskip}
+\setaftersubsecskip{\onelineskip}
+\setaftersubsubsecskip{\onelineskip}
+\setafterparaskip{\onelineskip}
+\setaftersubparaskip{\onelineskip}
 
-% Espaçamento entre paragrafos
+% Espaçamento entre paragrafos.
 \setlength{\parskip}{\lineskip}
 
 % Formatação das seções, subseções, etc.
@@ -81,3 +81,5 @@
 \setsubparaheadstyle{\normalsize\raggedright}
 \setsubparaindent{\paraindent}
 
+% Define a numeração da página para o topo direito.
+\pagestyle{myheadings}
