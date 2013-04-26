@@ -28,12 +28,16 @@
 % Classe principal e carregamento de pacotes
 \LoadClass[12pt,oneside,a4paper,article]{abntex2}
 
-\RequirePackage{mathptmx}
-\RequirePackage{graphicx}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[brazil]{babel}
 \RequirePackage[alf]{abntcite}
+\RequirePackage{graphicx}
+\RequirePackage{color}
+\RequirePackage{hyperref}
+\RequirePackage{mathptmx}
+\RequirePackage{makeidx}
+\RequirePackage{nomencl}
 \RequirePackage{indentfirst}
 
 % Adição de alguns comandos para a capa
@@ -46,6 +50,11 @@
 \providecommand{\imprimircurso}{}
 \newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
 
+% Adição de comandos para citação sem precisar ciar o nome do autor
+\providecommand{\citenonameref}[1]{(\citeauthor{{#1}}, \citeyear{{#1}})}
+
+\providecommand{\sigla}[2]{\nomenclature{{#1}}{#2}{#2} ({#1})}
+
 % Definindo alguns macros com um valor padrão
 \local{Caicó -- RN}
 \instituicao{Universidade Federal do Rio Grande do Norte}
@@ -55,6 +64,9 @@
 
 % Redefinição do modelo base do abnTeX2 e algumas configurações usadas pelo BSI.
 % =============================================================================
+
+% Definindo o espaçamento entre siglas.
+\setlength{\nomitemsep}{-\parsep}
 
 % Tamanho do recuo do paragrafo.
 \setlength{\parindent}{2cm}
@@ -90,6 +102,9 @@
 \renewcommand{\ABNTEXsectionfont}{\bfseries\fontfamily{\familydefault}\fontseries{\familydefault}\selectfont}
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+
+% Renomeando a página de siglas.
+\renewcommand{\nomname}{Lista de abreviaturas e siglas}
 
 % Configuração do estilo da bibliografia.
 \addto\captionsbrazil{%
