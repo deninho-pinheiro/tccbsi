@@ -36,6 +36,7 @@
 \RequirePackage{color}
 \RequirePackage{hyperref}
 \RequirePackage{mathptmx}
+\RequirePackage{amsfonts}
 \RequirePackage{makeidx}
 \RequirePackage{nomencl}
 \RequirePackage{indentfirst}
