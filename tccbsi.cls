@@ -39,6 +39,8 @@
 \RequirePackage{amsfonts}
 \RequirePackage{makeidx}
 \RequirePackage{nomencl}
+\RequirePackage{enumitem}
+\RequirePackage{thmtools}
 \RequirePackage{indentfirst}
 
 % Adição de alguns comandos para a capa
@@ -168,4 +170,9 @@
   \end{center}
 }
 \makeatother
+
+% Define um estilo de cabeçalho
+\makepagestyle{estilocabecalho}
+\makeevenhead{estilocabecalho}{}{}{\thepage}
+\makeoddhead{estilocabecalho}{}{}{\thepage}
 
